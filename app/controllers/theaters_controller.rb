@@ -7,9 +7,9 @@ class TheatersController < ApplicationController
   end
 
   def new
-    theater = Theater.new
+    @theater = Theater.new
     respond_to do |format|
-      format.json { render json: { theater: theater }, status: :ok }
+      format.json { render json: { theater: @theater }, status: :ok }
     end
   end
 

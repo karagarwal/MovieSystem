@@ -7,9 +7,9 @@ class TicketsController < ApplicationController
   end
 
   def new
-    ticket = Ticket.new
+    @ticket = Ticket.new
     respond_to do |format|
-      format.json { render json: { ticket: ticket }, status: :ok }
+      format.json { render json: { ticket: @ticket }, status: :ok }
     end
   end
 

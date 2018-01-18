@@ -7,12 +7,12 @@ class SeatTypesController < ApplicationController
   end
 
   def new
-    seat_type = SeatType.new
+    @seat_type = SeatType.new
     respond_to do |format|
-      format.json { render json: { seat_type: seat_type }, status: :ok }
+      format.json { render json: { seat_type: @seat_type }, status: :ok }
     end
   end
-
+  
   def show
     seat_type = SeatType.find(params[:id])
     respond_to do |format|

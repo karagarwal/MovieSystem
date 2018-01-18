@@ -7,9 +7,9 @@ class AudisController < ApplicationController
   end
 
   def new
-    audi = Audi.new
+    @audi = Audi.new
     respond_to do |format|
-      format.json { render json: { audi: audi }, status: :ok }
+      format.json { render json: { audi: @audi }, status: :ok }
     end
   end
 

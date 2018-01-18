@@ -9,7 +9,7 @@ RSpec.describe AudisController, type: :controller do
     end
   end
 
-  context 'GET new'
+  context 'GET new' do
     it 'should get new audi successfully' do
       request.accept = 'application/json'
       get :new

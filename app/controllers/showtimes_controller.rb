@@ -7,9 +7,9 @@ class ShowtimesController < ApplicationController
   end
 
   def new
-    showtime = Showtime.new
+    @showtime = Showtime.new
     respond_to do |format|
-      format.json { render json: { showtime: showtime }, status: :ok }
+      format.json { render json: { showtime: @showtime }, status: :ok }
     end
   end
 

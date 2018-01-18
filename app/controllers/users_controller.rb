@@ -7,9 +7,9 @@ class UsersController < ApplicationController
   end
 
   def new
-    user = User.new
+    @user = User.new
     respond_to do |format|
-      format.json { render json: { user: user }, status: :ok }
+      format.json { render json: { user: @user }, status: :ok }
     end
   end
 

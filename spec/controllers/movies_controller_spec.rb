@@ -9,7 +9,7 @@ RSpec.describe MoviesController, type: :controller do
     end
   end
 
-  context 'GET new'
+  context 'GET new' do
     it 'should get new movie successfully' do
       request.accept = 'application/json'
       get :new

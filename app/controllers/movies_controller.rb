@@ -7,9 +7,9 @@ class MoviesController < ApplicationController
   end
 
   def new
-    movie = Movie.new
+    @movie = Movie.new
     respond_to do |format|
-      format.json { render json: { movie: movie }, status: :ok }
+      format.json { render json: { movie: @movie }, status: :ok }
     end
   end
 

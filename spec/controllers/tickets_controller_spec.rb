@@ -24,7 +24,7 @@ RSpec.describe TicketsController, type: :controller do
     end
   end
 
-  context 'GET show'
+  context 'GET show' do
     it 'should show ticket successfully' do
       request.accept = 'application/json'
       ticket = FactoryGirl.create(:ticket)
